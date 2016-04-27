@@ -1,0 +1,27 @@
+// vars for media-queries
+// exampl:
+//      @include screen($littleboy-min, $littleboy-max){
+//          background-color: #000;
+//      }
+$littleboy-min: 0px;
+$littleboy-max: 480px;
+////////////////////////////////
+$middleboy-min: 320px;
+$middleboy-max: 568px;
+//////////////////////////////
+$olderboy-min: 414px;
+$olderboy-max: 736px;
+//////////////////////////////
+$mainWidt:1290px;
+// main colors
+
+$whiteColor:#f9ebd9;
+$whiteColor2:#f7ebd8;
+$blackColor:#383a3c;
+$yellowColor:#ecdfb7;
+
+
+// ptserif
+// @import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
+// @import url(https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,cyrillic);
+// $ptSerif: 'PT Serif', serif;
