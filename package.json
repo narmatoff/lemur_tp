@@ -34,7 +34,5 @@
     "wiredep": "^2.2.2"
   },
   "dependencies": {
-    "css": "^2.2.1",
-    "graceful-fs": "^4.1.3"
   }
 }
