@@ -27,7 +27,7 @@ var gulp = require('gulp'),
     // }),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    // csso = require('gulp-csso'),
+    csso = require('gulp-csso'),
     merge = require('gulp-merge'),
     svgmin = require('gulp-svgmin'),
     spritesmith = require('gulp.spritesmith'),
@@ -38,16 +38,12 @@ var gulp = require('gulp'),
     // svgSprite = require("gulp-svg-sprites"),
     wiredep = require('wiredep').stream,
     combineMq = require('gulp-combine-mq');
-
-
 // jade
 gulp.task('jade', function() {
     var YOUR_LOCALS = {};
-
     gulp.src('src/jade/*.jade')
         .pipe(plumber())
-
-    .pipe(jade({
+        .pipe(jade({
             locals: YOUR_LOCALS,
             pretty: true,
             paths: [path.join(__dirname, 'src/jade/includes')]
@@ -56,19 +52,15 @@ gulp.task('jade', function() {
         .pipe(livereload())
         .pipe(gulp.dest('dist/'));
     // .pipe(notify("jade готов!"));
-
 });
-
 // css
 // gulp.task('css', function() {
 //     // gulp.src('dist/css/bundle.min.css')
 //     gulp.src('src/css/noncompld/*.css')
 //         .pipe(plumber())
-
 //         .pipe(minifyCss({
 //             compatibility: 'ie8'
 //         }))
-
 //     .pipe(autoprefixer({
 //             browsers: ['last 14 versions'],
 //             cascade: false
@@ -86,7 +78,6 @@ gulp.task('jade', function() {
 //         .pipe(livereload())
 //         .pipe(notify("Css готов!"));
 // });
-
 gulp.task('lint_mainjs', function() {
     return gulp.src('src/js_src/main.js')
         .pipe(plumber())
@@ -115,7 +106,6 @@ gulp.task('lint_customplgnsjs', function() {
         .pipe(gulp.dest('dist/js'));
     // .pipe(notify("js готов!"));
 });
-
 // sass
 gulp.task('sass', function() {
     gulp.src('src/sass/main.scss')
@@ -136,48 +126,39 @@ gulp.task('sass', function() {
         .pipe(combineMq({
             beautify: false
         }))
-        // .pipe(csso())
-
-    .pipe(gulp.dest('dist/css'))
+        .pipe(csso())
+        .pipe(gulp.dest('dist/css'))
         .pipe(connect.reload())
         .pipe(livereload());
     // .pipe(notify("sass готов!"));
 });
-
-
-
 // спрайты
 gulp.task('sprite', function() {
     // Generate our spritesheet
     var spriteData = gulp.src('src/images/forsprts/*.png')
         .pipe(plumber())
-
-    .pipe(spritesmith({
-        imgName: 'sprite.png',
-        imgPath: "/dist/img/sprite.png",
-        cssName: '_sprite.scss',
-        cssFormat: "scss"
-            // padding: "2",
-            // algorithm: "binary-tree"
-    }));
-
+        .pipe(spritesmith({
+            imgName: 'sprite.png',
+            imgPath: "/dist/img/sprite.png",
+            cssName: '_sprite.scss',
+            cssFormat: "scss"
+                // padding: "2",
+                // algorithm: "binary-tree"
+        }));
     // Pipe image stream through image optimizer and onto disk
     var imgStream = spriteData.img
         // .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
-
     // Pipe CSS stream through CSS optimizer and onto disk
     var cssStream = spriteData.css
         // .pipe(csso())
         .pipe(gulp.dest('src/sass'));
-
     // Return a merged stream to handle both `end` events
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
         .pipe(livereload());
     // .pipe(notify("sprite готов!"));
 });
-
 // svgsprites
 // gulp.task('svgsprites', function() {
 //     return gulp.src('src/images/forsvgsprts/*.svg')
@@ -188,11 +169,7 @@ gulp.task('sprite', function() {
 //         .pipe(gulp.dest("dist/img/svg"))
 //         .pipe(connect.reload())
 //         .pipe(livereload());
-
 // });
-
-
-
 // imagemin
 gulp.task('imagemin', function() {
     return gulp.src('src/images/*')
@@ -209,13 +186,11 @@ gulp.task('imagemin', function() {
         .pipe(livereload());
     // .pipe(notify("imagemin готов!"));
 });
-
 // svgmin
 gulp.task('svgmin', function() {
     return gulp.src('src/images/svg/**/*.svg')
         .pipe(plumber())
-
-    .pipe(svgmin({
+        .pipe(svgmin({
             js2svg: {
                 pretty: true
             },
@@ -227,20 +202,16 @@ gulp.task('svgmin', function() {
         }).on('error', gutil.log))
         .pipe(gulp.dest('dist/img/svg'));
     // .pipe(notify("svgmin готов!"));
-
 });
-
-
 // bower
 gulp.task('bower', function() {
     return gulp
         .src('src/jade/**/*.jade')
         .pipe(plumber())
-
-    .pipe(wiredep({
+        .pipe(wiredep({
             directory: "dist/bower_components/",
-            // игнорируем путь для относительности путей
-            ignorePath: '../../dist/'
+            // игнорируем путь для относительности путей(если стили и библиотеки не подключились)
+            ignorePath: '../../../dist/'
         }).on('error', gutil.log))
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())
@@ -255,8 +226,6 @@ gulp.task('connect', function() {
         host: '0.0.0.0'
     });
 });
-
-
 // less
 // gulp.task('less', function() {
 //     return gulp
@@ -274,8 +243,6 @@ gulp.task('connect', function() {
 //         .pipe(gulp.dest('dist/css'))
 //         .pipe(notify("less готов!"));
 // });
-
-
 // coffee
 // gulp.task('coffee', function() {
 //     gulp.src('src/coffee/*.coffee')
@@ -288,7 +255,6 @@ gulp.task('connect', function() {
 //         .pipe(gulp.dest('dist/js'))
 //         .pipe(notify("coffee готов!"));
 // });
-
 // html
 // gulp.task('html', function() {
 //     gulp.src('*.html')
@@ -296,15 +262,12 @@ gulp.task('connect', function() {
 //         .pipe(livereload())
 //         .pipe(notify("html готов!"));
 // });
-
 // strip
 gulp.task('strip', function() {
     gulp.src('dist/js/*.js')
         .pipe(strip())
         .pipe(gulp.dest('dist/js'));
 });
-
-
 // Watch
 gulp.task('watch', function() {
     gulp.watch('src/jade/**/*.jade', ['jade']);
@@ -323,6 +286,5 @@ gulp.task('watch', function() {
     // gulp.watch('src/coffee/*.coffee', ['coffee']);
     livereload.listen();
 });
-
 // default
 gulp.task('default', ['jade', 'sass', 'lint_mainjs', 'lint_customplgnsjs', 'sprite', 'imagemin', 'svgmin', 'bower', 'watch', 'connect']);
