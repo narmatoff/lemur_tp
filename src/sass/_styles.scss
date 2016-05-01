@@ -1,4 +1,46 @@
-html,body{
-	outline: 1px dotted red;
-	font-family: $clearSans;
+html {
+	a{
+		outline: none;
+
+	}
+}
+
+body {
+
+	// шапка
+    .hdr {
+        outline: 1px dotted red;
+        // padding: 46px 0 0 0;
+        padding: 0;
+        width:1370px;
+        height: 144px;
+        margin:0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        // левая сторона шапки(logo)
+	        &__logo {
+				display:inline-block;
+	        }
+	        // картинка логотипа
+	        &__logosrc {
+	            width: 323px;
+	            // outline: 1px dotted red;
+	        }
+		// правая сторона шапки
+		&__rightside {
+			outline:1px dotted red;
+			// margin:0 auto 0 0;
+			// margin-right: auto;
+            &__contacts {}
+            &__menu {}
+            &__icons {
+                &__phone {}
+                &__email {}
+                &__card {}
+            }
+        }
+    }
 }

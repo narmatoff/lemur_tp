@@ -1,2 +1,26 @@
-header
-	p header
+//- шапка
+header.hdr
+	//- логотип слева. левая часть шапки
+	a(href="#").hdr__logo
+		img(src="img/lemur-telecom_logo.png", alt="logo",title="ЛемурТелеком").hdr__logosrc
+
+		//- правая часть шапки
+	.hdr__rightside
+		a(href="#").hdr__rightside__contacts
+			a(href="tel:#") 8 890 467 77 05
+			.hdr__rightside__icons
+				.hdr__rightside__icons__phone
+				.hdr__rightside__icons__email
+				.hdr__rightside__icons__card
+
+		ul.hdr__rightside__menu
+			li
+				a(href="#") главная
+			li
+				a(href="#") о компании
+			li
+				a(href="#") услуги
+			li
+				a(href="#") тарифы
+			li
+				a(href="#") контакты

@@ -25,8 +25,9 @@ var gulp = require('gulp'),
     // coffeeStream = coffee({
     //     bare: true
     // }),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
+    // imagemin = require('gulp-imagemin'),
+    image = require('gulp-image'),
+    // pngquant = require('imagemin-pngquant'),
     csso = require('gulp-csso'),
     merge = require('gulp-merge'),
     svgmin = require('gulp-svgmin'),
@@ -171,21 +172,40 @@ gulp.task('sprite', function() {
 //         .pipe(livereload());
 // });
 // imagemin
-gulp.task('imagemin', function() {
-    return gulp.src('src/images/*')
-        .pipe(plumber())
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{
-                removeViewBox: true
-            }],
-            use: [pngquant()]
+// gulp.task('imagemin', function() {
+//     return gulp.src('src/images/*')
+//         .pipe(plumber())
+//         .pipe(imagemin({
+//             progressive: true,
+//             svgoPlugins: [{removeViewBox: true}],
+//             use: [pngquant()]
+//         }))
+//         .pipe(gulp.dest('dist/img'))
+//         .pipe(connect.reload())
+//         .pipe(livereload());
+//     // .pipe(notify("imagemin готов!"));
+// });
+
+// image
+gulp.task('image', function() {
+    gulp.src('src/images/*')
+        .pipe(plumber())  
+        .pipe(image({
+            pngquant: true,
+            optipng: true,
+            zopflipng: true,
+            advpng: true,
+            jpegRecompress: false,
+            jpegoptim: true,
+            mozjpeg: true,
+            gifsicle: true,
+            svgo: true
         }))
         .pipe(gulp.dest('dist/img'))
         .pipe(connect.reload())
         .pipe(livereload());
-    // .pipe(notify("imagemin готов!"));
 });
+
 // svgmin
 gulp.task('svgmin', function() {
     return gulp.src('src/images/svg/**/*.svg')
@@ -270,16 +290,16 @@ gulp.task('strip', function() {
 });
 // Watch
 gulp.task('watch', function() {
+    gulp.watch('src/images/forsprts/**/*.png', ['sprite']);
     gulp.watch('src/jade/**/*.jade', ['jade']);
     // gulp.watch('src/css/noncompld/*.css', ['css']);
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/js_src/main.js', ['lint_mainjs']);
     gulp.watch('src/js_src/custom_plgns.js', ['lint_customplgnsjs']);
-    gulp.watch('src/images/forsprts/*.png', ['sprite']);
     gulp.watch('src/images/master_picture.png', ['favicons']);
     // gulp.watch('src/images/master_picture.png', ['inject-favicon-markups']);
     // gulp.watch('src/images/forsvgsprts/*.svg', ['svgsprites']);
-    gulp.watch('src/images/*', ['imagemin']);
+    // gulp.watch('src/images/*', ['imagemin']);
     gulp.watch('src/images/svg/**/*.svg', ['svgmin']);
     gulp.watch('bower.json', ['bower']);
     // gulp.watch('src/less/**/*.less', ['less']);
@@ -287,4 +307,4 @@ gulp.task('watch', function() {
     livereload.listen();
 });
 // default
-gulp.task('default', ['jade', 'sass', 'lint_mainjs', 'lint_customplgnsjs', 'sprite', 'imagemin', 'svgmin', 'bower', 'watch', 'connect']);
+gulp.task('default', ['jade', 'sass', 'lint_mainjs', 'lint_customplgnsjs', 'sprite', 'image', 'svgmin', 'bower', 'watch', 'connect']);
