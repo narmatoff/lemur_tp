@@ -54,6 +54,16 @@ gulp.task('jade', function() {
         .pipe(gulp.dest('dist/'));
     // .pipe(notify("jade готов!"));
 });
+
+// fonts
+gulp.task('fonts', function() {
+    return gulp.src([
+            'src/fonts/*.*'
+        ])
+        .pipe(gulp.dest('dist/css/fonts'));
+});
+
+
 // css
 // gulp.task('css', function() {
 //     // gulp.src('dist/css/bundle.min.css')
@@ -189,7 +199,7 @@ gulp.task('sprite', function() {
 // image
 gulp.task('image', function() {
     gulp.src('src/images/*')
-        .pipe(plumber())  
+        .pipe(plumber())
         .pipe(image({
             pngquant: true,
             optipng: true,
@@ -294,6 +304,7 @@ gulp.task('watch', function() {
     gulp.watch('src/jade/**/*.jade', ['jade']);
     // gulp.watch('src/css/noncompld/*.css', ['css']);
     gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/fonts/**/*.*', ['fonts']);
     gulp.watch('src/js_src/main.js', ['lint_mainjs']);
     gulp.watch('src/js_src/custom_plgns.js', ['lint_customplgnsjs']);
     gulp.watch('src/images/master_picture.png', ['favicons']);
@@ -307,4 +318,4 @@ gulp.task('watch', function() {
     livereload.listen();
 });
 // default
-gulp.task('default', ['jade', 'sass', 'lint_mainjs', 'lint_customplgnsjs', 'sprite', 'image', 'svgmin', 'bower', 'watch', 'connect']);
+gulp.task('default', ['jade', 'sass', 'fonts', 'lint_mainjs', 'lint_customplgnsjs', 'sprite', 'image', 'svgmin', 'bower', 'watch', 'connect']);

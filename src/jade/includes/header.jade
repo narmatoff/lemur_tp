@@ -6,21 +6,21 @@ header.hdr
 
 		//- правая часть шапки
 	.hdr__rightside
-		a(href="#").hdr__rightside__contacts
-			a(href="tel:#") 8 890 467 77 05
+		.hdr__rightside__contacts
+			a(href="tel:#").phone__number.phone__number_headercolor 8 890 467 77 05
 			.hdr__rightside__icons
-				.hdr__rightside__icons__phone
-				.hdr__rightside__icons__email
-				.hdr__rightside__icons__card
+				a(href="#").hdr__rightside__icons__phone
+				a(href="#").hdr__rightside__icons__email
+				a(href="#").hdr__rightside__icons__card
 
-		ul.hdr__rightside__menu
-			li
+		ul.hdr__rightside__menu.hdr__rightside__menu_margin
+			li.hdr__rightside__item.hdr__rightside__item_margin
 				a(href="#") главная
-			li
+			li.hdr__rightside__item.hdr__rightside__item_margin
 				a(href="#") о компании
-			li
+			li.hdr__rightside__item.hdr__rightside__item_margin
 				a(href="#") услуги
-			li
+			li.hdr__rightside__item.hdr__rightside__item_margin
 				a(href="#") тарифы
-			li
+			li.hdr__rightside__item
 				a(href="#") контакты
