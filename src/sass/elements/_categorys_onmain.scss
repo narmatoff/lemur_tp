@@ -22,7 +22,8 @@
 	.category__onmain__item {
 		// outline:1px dotted red;
 		flex-basis: 50%;
-		height: 26.5em;
+		// height: 26.5em;
+		height: 22.1vw;
 		&_icon {
 			margin: 0 0 1.5em;
 		}
@@ -79,7 +80,7 @@
 				background-repeat: no-repeat;
 				.category__onmain__link {
 					color: #fff;
-					background-color: rgba(256,256,256, 0.2);
+					background-color: rgba(0, 0, 0, 0.3);
 					.category__onmain__item_name {
 						font-size: 1.1em;
 					}
@@ -130,7 +131,7 @@
 		}
 		.category__onmain__item_name {
 			font-family: $clearsansRegular;
-			text-align: center;;
+			text-align: center;
 			font-size: 20px;
 			/* Приближение из-за подстановки шрифтов */
 			text-transform: uppercase;

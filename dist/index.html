@@ -4,11 +4,13 @@
   <meta charset="UTF-8"/>
   <title>ЛемурТелеком</title>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
   <meta name="description" content="Предоставление услуг связи"/>
   <meta name="date" content="2016-05-01" scheme="YYYY-MM-DD"/>
   <meta name="keywords" content="HTML,CSS,XML,JavaScript"/>
   <meta name="author" content="seoready.ru"/>
   <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.css"/>
 </head>
 <body>
   <header class="hdr"><a href="#" class="hdr__logo"><img src="img/lemur-telecom_logo.png" alt="logo" title="ЛемурТелеком" class="hdr__logosrc"/></a>
@@ -44,9 +46,32 @@
         <div class="server__icon category__onmain__item_icon"></div>
         <div class="category__onmain__item_name">Внедрение серверов <br/>IP-телефонии</div></a></div>
   </div>
+  <div class="left__heading left__heading_withbuttons">
+    <div class="left__heading__naming">
+      <h2>популярные тарифы</h2><a href="#" class="left__heading__naming__link left__heading__naming__link_margin">Все тарифы</a>
+    </div>
+    <div class="left__heading__buttons__wr">
+      <div class="left__heading__buttons__wr__prev"></div>
+      <div class="left__heading__buttons__wr__next"></div>
+    </div>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">slide 1</div>
+      <div class="swiper-slide">slide 2</div>
+      <div class="swiper-slide">slide 3</div>
+      <div class="swiper-slide">slide 4</div>
+      <div class="swiper-slide">slide 1</div>
+      <div class="swiper-slide">slide 2</div>
+      <div class="swiper-slide">slide 3</div>
+      <div class="swiper-slide">slide 4</div>
+    </div>
+  </div>
   <footer>
     <p>footer</p>
   </footer>
+  <script src="bower_components/Swiper/dist/js/swiper.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="js/custom_plgns.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

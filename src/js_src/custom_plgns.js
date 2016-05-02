@@ -1,1 +1,3 @@
-console.log('custom');
+$(document).ready(function() {
+    console.log('custom');
+});

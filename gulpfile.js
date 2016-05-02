@@ -38,7 +38,20 @@ var gulp = require('gulp'),
     jsmin = require('gulp-jsmin'),
     // svgSprite = require("gulp-svg-sprites"),
     wiredep = require('wiredep').stream,
-    combineMq = require('gulp-combine-mq');
+    combineMq = require('gulp-combine-mq'),
+    gulp = require('gulp');
+
+
+// gulp.task('html', function () {
+//     return gulp.src('app/*.html')
+//         .pipe(useref())
+//         .pipe(gulpif('*.js'))
+//         .pipe(gulpif('*.css'))
+//         .pipe(gulp.dest('dist'));
+// });
+
+
+
 // jade
 gulp.task('jade', function() {
     var YOUR_LOCALS = {};
@@ -49,6 +62,8 @@ gulp.task('jade', function() {
             pretty: true,
             paths: [path.join(__dirname, 'src/jade/includes')]
         }).on('error', gutil.log))
+
+
         .pipe(connect.reload())
         .pipe(livereload())
         .pipe(gulp.dest('dist/'));
@@ -152,9 +167,11 @@ gulp.task('sprite', function() {
             imgName: 'sprite.png',
             imgPath: "/dist/img/sprite.png",
             cssName: '_sprite.scss',
-            cssFormat: "scss"
+            cssFormat: "scss",
                 // padding: "2",
-                // algorithm: "binary-tree"
+
+                // top-down	left-right	diagonal	alt-diagonal	binary-tree
+                algorithm: "left-right"
         }));
     // Pipe image stream through image optimizer and onto disk
     var imgStream = spriteData.img

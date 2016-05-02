@@ -8,6 +8,9 @@ html {
     letter-spacing: 0.09em;
     div {
         transition: all ease-in-out 0.2s;
+        // box-sizing: border-box;
+        box-sizing: content-box;
+
     }
 }
 body {
@@ -30,18 +33,105 @@ body {
     // иконки категорий на главной
     .phone__icon__big {
         @include sprite($telephone_big);
+        // transition: none;
+
     }
     .meh__icon {
         @include sprite($cogwheel);
+        // transition: none;
+
     }
     .smartphone__icon {
         @include sprite($smartphone);
+        // transition: none;
+
     }
     .tools__icon {
         @include sprite($repair-tools);
+        // transition: none;
+
     }
     .server__icon {
         @include sprite($server);
+        // transition: none;
+
+    }
+
+    // h2 заголовок на главной
+    .left__heading{
+        min-width: $mainMinWidt;
+        max-width:$mainMaxWidt;
+        margin: 2.9em auto 2.9em auto;
+        padding: 0 1em 0 1em;
+        box-sizing: content-box;
+        &_withbuttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: row nowrap;
+
+        }
+        &__naming{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // заголовок
+            h2{
+                color:  $darkGrey;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            // смотреть все/подробнее
+            &__link{
+                color:  $yellow;
+                font-family: $clearsansThinRegular;
+                font-size: 15px;/* Приближение из-за подстановки шрифтов */
+                font-weight: 400;
+                line-height: 20px;/* Приближение из-за подстановки шрифтов */
+                text-align: right;
+                letter-spacing: 0;
+                &:hover{
+                    color:  $darkGrey;
+
+                }
+                &_margin{
+                    margin: 0.6em 0 0 3em;
+                }
+
+            }
+
+        }
+
+        // кнопки листания слайдера тарифов
+        &__buttons__wr{
+            width: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: row nowrap;
+            &__prev{
+                @include sprite($prev_arrow);
+                cursor: pointer;
+                // transition:all ease .01s;
+                &:hover{
+                    @include sprite($prev_arrow_hover);
+
+                }
+            }
+            &__next{
+                @include sprite($next_arrow);
+                cursor: pointer;
+                &:hover{
+                    @include sprite($next_arrow_hover);
+
+                }
+            }
+        }
+
+
     }
     // шапка
     // шапка
