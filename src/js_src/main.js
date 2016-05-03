@@ -7,7 +7,7 @@ $(document).ready(function() {
         prevButton: '.left__heading__buttons__wr__prev',
         slidesPerView: 4,
         paginationClickable: true,
-        spaceBetween: 0
+        spaceBetween: 32
     });
 
 });

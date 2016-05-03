@@ -1,11 +1,8 @@
 .hdr {
         // outline: 1px dotted red;
         // padding: 46px 0 0 0;
-        padding: 0 1em 0 1em;
-        max-width: $mainMaxWidt;
-        min-width: $mainMinWidt;
+        @extend .content_width;
         height: 144px;
-        margin: 0 auto;
         // @extend .flex_rw_aicenter_jcspacebet;
         display: flex;
         flex-flow: row wrap;

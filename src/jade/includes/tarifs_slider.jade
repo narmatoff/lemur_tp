@@ -1,34 +1,118 @@
-.left__heading.left__heading_withbuttons
-    //- left__heading__naming_withbuttons - позиционирует флексбоксом
-    .left__heading__naming
-        h2 популярные тарифы
-        a(href="#").left__heading__naming__link.left__heading__naming__link_margin Все тарифы
-    .left__heading__buttons__wr
-        .left__heading__buttons__wr__prev
-        .left__heading__buttons__wr__next
-    
-    
-        
+
 
 //- slider main container
-.swiper-container
-    //- additional required conteiner
-    .swiper-wrapper
-        //- slides
-        .swiper-slide slide 1
-        .swiper-slide slide 2
-        .swiper-slide slide 3
-        .swiper-slide slide 4
-        .swiper-slide slide 1
-        .swiper-slide slide 2
-        .swiper-slide slide 3
-        .swiper-slide slide 4
-    //- pagination
-    //- .swiper-pagination
+.swiper-main_wrapper
     
-    //- nav buttons
-    //- .swiper-button-prev
-    //- .swiper-button-next
+    //- heading with buttons
+    .left__heading.left__heading_withbuttons
+
+        //- left__heading__naming_withbuttons - позиционирует флексбоксом
+        .left__heading__naming
+            h2 популярные тарифы
+            a(href="#").left__heading__naming__link.left__heading__naming__link_margin Все тарифы
+        .left__heading__buttons__wr
+            .left__heading__buttons__wr__prev
+            .left__heading__buttons__wr__next
+                
+    .swiper-container
+        //- additional required conteiner
+        .swiper-wrapper
+            
+            //- slides
+            .swiper-slide.thebestof
+                .swiper-slide__tarif__name Всё включено +
+                .swiper-slide__tarif__price
+                    .swiper-slide__tarif__price__value 890 р
+                    .swiper-slide__tarif__price__perm в месяц
+                .swiper-slide__tarif__about
+                    ul
+                        li - Безлимитные звонки в России 
+                        li - 350 минут
+                        li - 350 SMS
+                        li - 3 ГБ
+                .swiper-slide__tarif__poscript Абонентская плата по акции в первый месяц 
+                    span 350 руб.
+                
+                //- on hover block
+                .swiper-slide_hover
+                    .swiper-slide_hover__name Всё включено +
+                    .swiper-slide_hover__price
+                        .swiper-slide_hover__price__value 890 р
+                        .swiper-slide_hover__price__perm в месяц
+                        
+            .swiper-slide
+                .swiper-slide__tarif__name Всё включено +
+                .swiper-slide__tarif__price
+                    .swiper-slide__tarif__price__value 750 р
+                    .swiper-slide__tarif__price__perm в месяц
+                .swiper-slide__tarif__about
+                    ul
+                        li - Безлимитные звонки в России 
+                        li - 350 минут
+                        li - 350 SMS
+                        li - 3 ГБ
+                .swiper-slide__tarif__poscript Абонентская плата по акции в первый месяц 
+                    span 350 руб.
+            .swiper-slide.thebestof
+                .swiper-slide__tarif__name Всё включено +
+                .swiper-slide__tarif__price
+                    .swiper-slide__tarif__price__value 200 р
+                    .swiper-slide__tarif__price__perm в месяц
+                .swiper-slide__tarif__about
+                    ul
+                        li - Безлимитные звонки в России 
+                        li - 350 минут
+                        li - 350 SMS
+                        li - 3 ГБ
+                .swiper-slide__tarif__poscript Абонентская плата по акции в первый месяц 
+                    span 350 руб.
+            .swiper-slide
+                .swiper-slide__tarif__name Всё включено +
+                .swiper-slide__tarif__price
+                    .swiper-slide__tarif__price__value 400 р
+                    .swiper-slide__tarif__price__perm в месяц
+                .swiper-slide__tarif__about
+                    ul
+                        li - Безлимитные звонки в России 
+                        li - 350 минут
+                        li - 350 SMS
+                        li - 3 ГБ
+                .swiper-slide__tarif__poscript Абонентская плата по акции в первый месяц 
+                    span 350 руб.
+            .swiper-slide
+                .swiper-slide__tarif__name Всё включено <br/>в две строки
+                .swiper-slide__tarif__price
+                    .swiper-slide__tarif__price__value 150 р
+                    .swiper-slide__tarif__price__perm в месяц
+                .swiper-slide__tarif__about
+                    ul
+                        li - Безлимитные звонки в России 
+                        li - 350 минут
+                        li - 350 SMS
+                        li - 3 ГБ
+                .swiper-slide__tarif__poscript Абонентская плата по акции в первый месяц 
+                    span 350 руб.
+            .swiper-slide
+                .swiper-slide__tarif__name Всё включено +
+                .swiper-slide__tarif__price
+                    .swiper-slide__tarif__price__value 1000 р
+                    .swiper-slide__tarif__price__perm в месяц
+                .swiper-slide__tarif__about
+                    ul
+                        li - Безлимитные звонки в России 
+                        li - 350 минут
+                        li - 350 SMS
+                        li - 3 ГБ
+                .swiper-slide__tarif__poscript Абонентская плата по акции в первый месяц 
+                    span 350 руб.
+
+
+        //- pagination
+        //- .swiper-pagination
         
-    //- scroll bar
-    //- .swiper-scrollbar
+        //- nav buttons
+        //- .swiper-button-prev
+        //- .swiper-button-next
+            
+        //- scroll bar
+        //- .swiper-scrollbar
