@@ -1,5 +1,4 @@
-.swiper {
-    &-logos_wrapper {
+.swiper-logos_wrapper {
         width: 100%;
         background-color: $darkGrey;
         color: #fff;
@@ -10,45 +9,63 @@
         justify-content: center;
         align-items: center;
     }
-    &-logos {
-        @extend .content_width;
-        max-width: 59.79%;
-        margin: 0 auto;
-        // padding-top: 1em;
-        padding: 0;
-        overflow: hidden;
-        display: flex;
-        // position: relative;
-        // &:before{
-        //     content: "111";
-        //     position: absolute;
-        //     left: 14.1%;
-        //     top: 45%;
-        // }
-        // &:after{
-        //     content: "222";
-        //     position: absolute;
-        //     right: 14.1%;
-        //     top: 45%;
-        //
-        // }
-    }
-    &-logo {
+.logos__slider{
+    // outline: 1px dotted red;
+    @extend .content_width;
+    max-width: 1200px;
+    // padding-top: 1em;
+    overflow: hidden;
+    z-index: 2;
+    // height: 32em;
+    // display: flex;
+    // flex-flow: row nowrap;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 0 4em 0 4em;
+    &__slide{
         height: auto;
-        width: 130px;
+        // margin: 0 0 0 1em;
+        // width: 130px;
     }
-}
+    &__link{
 
-.logos__nav{
-    width: 100%;
-    &__prev{
+    }
+    &__img{
+        width: 130px;
+
+    }
+    &__arrows{
+        // outline: 1px dotted red;
+        @extend .content_width;
+        max-width: 1370px;
+        // min-width: 1280px;
+        padding: 0 1em 0 1em;
+        height: 32px;
+        z-index: 1;
         position: absolute;
-        top: 25%;
-        // left: -30px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        box-sizing: border-box;
+        // @include respond-to(postmedium-screens) {
+        //     display: none;
+        // }
     }
     &__next{
-        position: absolute;
-        top: 25%;
+        // outline: 1px dotted red;
+        right: 16px;
+        z-index: 10;
+
+    }
+    &__prev{
+        // outline: 1px dotted red;
+        left: 16px;
+        z-index: 10;
 
     }
 }

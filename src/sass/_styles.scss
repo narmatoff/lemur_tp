@@ -25,8 +25,8 @@ html {
         // letter-spacing: 25em;
         position: relative;
         z-index: 5;
-
     }
+
     // заголовок
     h2 {
         // font-size: 24pt;
@@ -40,7 +40,9 @@ html {
 
         // letter-spacing: 25em;
     }
-
+    .swiper-button-disabled{
+        opacity: 0.5;
+    }
 }
 body {
     color: $darkGrey;
@@ -228,6 +230,22 @@ body {
         @include sprite($prev_arrow);
         cursor: pointer;
         // transition:all ease .01s;
+        z-index: 9999;
+        left: 0;
+        top: 22px;
+        background-size: auto;
+        &_darkfirst{
+            @include sprite($prev_arrow_hover);
+            cursor: pointer;
+            // transition:all ease .01s;
+            z-index: 9999;
+            left: 0;
+            top: 22px;
+            background-size: auto;
+            &:hover {
+                @include sprite($prev_arrow);
+            }
+        }
         &:hover {
             @include sprite($prev_arrow_hover);
         }
@@ -235,6 +253,21 @@ body {
     .next__button {
         @include sprite($next_arrow);
         cursor: pointer;
+        z-index: 9999;
+        right: 0;
+        top: 22px;
+        background-size: auto;
+        &_darkfirst{
+            @include sprite($next_arrow_hover);
+            cursor: pointer;
+            z-index: 9999;
+            right: 0;
+            top: 22px;
+            background-size: auto;
+            &:hover {
+                @include sprite($next_arrow);
+            }
+        }
         &:hover {
             @include sprite($next_arrow_hover);
         }
@@ -247,4 +280,5 @@ body {
     @import "elements/_tarifs_slider";
     @import "elements/_details_blocks";
     @import "elements/logos_slider";
+    @import "elements/main_content";
 }

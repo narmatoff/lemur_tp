@@ -3,7 +3,11 @@
     position: relative;
     height: 37em;
     &__back{
-        @include sprite($lemur_back);
+        // @include sprite($lemur_back);
+        background-image: url('../img/lemur_back.png');
+        background-size: cover;
+        width: 784px;
+        height: 578px;
         position: absolute;
         // right: 5.5em;
         // right: 5%;
