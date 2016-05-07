@@ -8,6 +8,8 @@
         flex-flow: row wrap;
         align-items: center;
         justify-content: space-between;
+        letter-spacing: 0.09em;
+        
         // левая сторона шапки(logo)
         &__logo {
             display: inline-block;

@@ -7,7 +7,7 @@ html {
     }
     font-family: $clearsansRegular;
     // font-kerning: 4.4em;
-    letter-spacing: 0.09em;
+    letter-spacing: 0;
     button,
     div,
     input {
@@ -15,6 +15,32 @@ html {
         // box-sizing: border-box;
         box-sizing: content-box;
     }
+    // заголовок
+    h1 {
+        color: $darkGrey;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        // font-size: 30pt;
+        // letter-spacing: 25em;
+        position: relative;
+        z-index: 5;
+
+    }
+    // заголовок
+    h2 {
+        // font-size: 24pt;
+        color: $darkGrey;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+        margin: 2.5em 0 2.5em 0;
+
+        // letter-spacing: 25em;
+    }
+
 }
 body {
     color: $darkGrey;
@@ -76,7 +102,7 @@ body {
         }
         &_footercolor {}
     }
-    // иконки категорий на главной
+    // иконки
     .phone__icon__big {
         @include sprite($telephone_big);
         // transition: none;
@@ -96,6 +122,30 @@ body {
     .server__icon {
         @include sprite($server);
         // transition: none;
+    }
+    .coins__icon{
+        @include sprite($coins_icon);
+
+    }
+    .repairtools__icon{
+        @include sprite($repairtools_icon);
+
+    }
+    .callwomen__icon{
+        @include sprite($callwomen_icon);
+
+    }
+    .rings__icon{
+        @include sprite($rings_icon);
+
+    }
+    .helpcircle__icon{
+        @include sprite($helpcircle_icon);
+
+    }
+    .key__icon{
+        @include sprite($key_icon);
+
     }
     // h2 заголовок на главной
     // h2 заголовок на главной
@@ -129,24 +179,14 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            // заголовок
-            h1 {
-                color: $darkGrey;
-                font-weight: 500;
-                text-align: center;
-                text-transform: uppercase;
-                // font-size: 30pt;
-                // letter-spacing: 25em;
+            h1{
+                margin: inherit;
             }
-            // заголовок
-            h2 {
-                // font-size: 24pt;
-                color: $darkGrey;
-                font-weight: 500;
-                text-align: center;
-                text-transform: uppercase;
-                // letter-spacing: 25em;
+            h2{
+                margin: inherit;
+
             }
+
             // смотреть все/подробнее
             // смотреть все/подробнее
             // смотреть все/подробнее
@@ -181,40 +221,30 @@ body {
             justify-content: space-between;
             align-items: center;
             flex-flow: row nowrap;
-            &__prev {
-                @include sprite($prev_arrow);
-                cursor: pointer;
-                // transition:all ease .01s;
-                &:hover {
-                    @include sprite($prev_arrow_hover);
-                }
-            }
-            &__next {
-                @include sprite($next_arrow);
-                cursor: pointer;
-                &:hover {
-                    @include sprite($next_arrow_hover);
-                }
-            }
+
         }
     }
-    // шапка
-    // шапка
-    // шапка
-    // шапка
-    // шапка
-    // шапка
-    // шапка
-    // шапка
+    .prev__button {
+        @include sprite($prev_arrow);
+        cursor: pointer;
+        // transition:all ease .01s;
+        &:hover {
+            @include sprite($prev_arrow_hover);
+        }
+    }
+    .next__button {
+        @include sprite($next_arrow);
+        cursor: pointer;
+        &:hover {
+            @include sprite($next_arrow_hover);
+        }
+    }
+
+
+    // blocks
     @import "elements/header";
-    // categorys on main
-    // categorys on main
-    // categorys on main
-    // categorys on main
-    // categorys on main
-    // categorys on main
-    // categorys on main
     @import "elements/_categorys_onmain";
     @import "elements/_tarifs_slider";
     @import "elements/_details_blocks";
+    @import "elements/logos_slider";
 }

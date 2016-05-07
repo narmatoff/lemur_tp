@@ -2,21 +2,21 @@
     &-main_wrapper {
         width: 100%;
         background-color: $lightGrey;
-        height: 45em;
+        height: 44em;
     }
-    &-container {
+    &-tarifs {
         // outline: 1px dotted red;
         @extend .content_width;
         // padding: 0;
         padding-top: 1em;
-        // overflow: hidden;
-            height: 32em;
+        overflow: hidden;
+        height: 32em;
     }
     &-wrapper {
-        width: 100%;
+        // width: 100%;
         height: auto;
     }
-    &-slide {
+    &-tarif {
         letter-spacing: 0;
         // width: 100%;
         // outline: 1px dotted green;
@@ -192,7 +192,7 @@
             }
         }
         &:hover {
-            .swiper-slide_hover {
+            .swiper-tarif_hover {
                 opacity: 1;
                 transform: translateY(0px);
             }

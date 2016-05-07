@@ -1,0 +1,54 @@
+.swiper {
+    &-logos_wrapper {
+        width: 100%;
+        background-color: $darkGrey;
+        color: #fff;
+        position: relative;
+        height: 109px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    &-logos {
+        @extend .content_width;
+        max-width: 59.79%;
+        margin: 0 auto;
+        // padding-top: 1em;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        // position: relative;
+        // &:before{
+        //     content: "111";
+        //     position: absolute;
+        //     left: 14.1%;
+        //     top: 45%;
+        // }
+        // &:after{
+        //     content: "222";
+        //     position: absolute;
+        //     right: 14.1%;
+        //     top: 45%;
+        //
+        // }
+    }
+    &-logo {
+        height: auto;
+        width: 130px;
+    }
+}
+
+.logos__nav{
+    width: 100%;
+    &__prev{
+        position: absolute;
+        top: 25%;
+        // left: -30px;
+    }
+    &__next{
+        position: absolute;
+        top: 25%;
+
+    }
+}

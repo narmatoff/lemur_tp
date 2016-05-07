@@ -1,3 +1,4 @@
 $(document).ready(function() {
-    console.log('custom');
+    console.log('custom_plgns.js');
+    
 });
