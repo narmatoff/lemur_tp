@@ -4,6 +4,10 @@ html {
         transition: all ease-in-out 0.05s;
         color: $yellow;
         text-decoration: underline;
+        &:hover{
+            color: darken($yellow,10%);
+
+        }
     }
     font-family: $clearsansRegular;
     // font-kerning: 4.4em;
@@ -281,4 +285,5 @@ body {
     @import "elements/_details_blocks";
     @import "elements/logos_slider";
     @import "elements/main_content";
+    @import "elements/footer";
 }

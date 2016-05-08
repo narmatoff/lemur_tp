@@ -171,7 +171,7 @@ gulp.task('sprite', function() {
                 // padding: "2",
 
                 // top-down	left-right	diagonal	alt-diagonal	binary-tree
-                algorithm: "left-right"
+                algorithm: "top-down"
         }));
     // Pipe image stream through image optimizer and onto disk
     var imgStream = spriteData.img

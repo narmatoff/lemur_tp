@@ -1,7 +1,8 @@
-.main_content {
+.main__content__wr {
     min-height: 1279px;
     width: 100%;
     position: relative;
+    padding: 0;
     &_back {
         background-image: url('../img/wolkin_man.png');
         background-size: cover;
@@ -10,5 +11,6 @@
         position: absolute;
         left: 0;
         bottom: 0;
+        z-index: -1;
     }
 }
