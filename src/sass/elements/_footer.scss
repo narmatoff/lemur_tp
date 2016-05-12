@@ -113,7 +113,9 @@ footer {
         align-items: center;
     }
     &__right {
-        color: $grey;
+        color: lighten($darkGrey,20%);
+        font-family: $clearsansRegular;
+
     }
     &__soc {
         &__link {}

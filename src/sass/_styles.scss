@@ -181,6 +181,14 @@ body {
             flex-flow: row nowrap;
             // background-color: $lightGrey;
         }
+        &_withoutbuttons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-flow: row nowrap;
+            padding: 5em 0 3.5em 0;
+            // background-color: $lightGrey;
+        }
         &__naming {
             display: flex;
             justify-content: center;
