@@ -1,4 +1,14 @@
 html {
+    font-family: $clearsansRegular;
+    // font-kerning: 4.4em;
+    letter-spacing: 0;
+    p{
+        font-family: $clearsansLightRegular;
+        color: #6c6c6c;
+        font-size: .9em;
+        line-height: 24px;
+        text-align: left;
+    }
     a {
         outline: none !important;
         transition: all ease-in-out 0.05s;
@@ -9,9 +19,6 @@ html {
 
         }
     }
-    font-family: $clearsansRegular;
-    // font-kerning: 4.4em;
-    letter-spacing: 0;
     button,
     div,
     input {

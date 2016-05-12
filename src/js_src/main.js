@@ -5,6 +5,7 @@ $(document).ready(function() {
         //    pagination: '.swiper-pagination',
         nextButton: '.tarifs_next',
         prevButton: '.tarifs_prev',
+        autoplay:6000,
         slidesPerView: 4,
         paginationClickable: true,
         spaceBetween: 32
@@ -14,6 +15,7 @@ $(document).ready(function() {
             // pagination: '.swiper-pagination',
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
+            autoplay:6000,
             slidesPerView: 7,
             paginationClickable: true,
             spaceBetween: 44,
