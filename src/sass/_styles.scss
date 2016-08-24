@@ -120,10 +120,20 @@ body {
         @include sprite($telephone_big);
         // transition: none;
     }
+    .phone__icon__big_white {
+        @include sprite($telephone_big_hover);
+        // transition: none;
+    }
+
     .meh__icon {
         @include sprite($cogwheel);
         // transition: none;
     }
+    .meh__icon_white {
+        @include sprite($cogwheel-hover);
+        // transition: none;
+    }
+
     .smartphone__icon {
         @include sprite($smartphone);
         // transition: none;
@@ -132,10 +142,16 @@ body {
         @include sprite($repair-tools);
         // transition: none;
     }
+
     .server__icon {
         @include sprite($server);
         // transition: none;
     }
+    .server__icon_white {
+        @include sprite($server-hover);
+        // transition: none;
+    }
+
     .coins__icon{
         @include sprite($coins_icon);
 
@@ -295,6 +311,7 @@ body {
 
     // blocks
     @import "elements/header";
+    @import "elements/_horizontal_categorys";
     @import "elements/_categorys_onmain";
     @import "elements/_tarifs_slider";
     @import "elements/_details_blocks";
