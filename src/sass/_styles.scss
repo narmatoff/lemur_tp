@@ -8,6 +8,23 @@ html {
         font-size: .9em;
         line-height: 24px;
         text-align: left;
+        &.quote{
+
+            font-size:1.2em;
+            color:$darkGrey;
+            font-weight:bold;
+            width: 413px;
+            margin: 3em auto 3em auto;
+            position: relative;
+            &:before{
+                content:"";
+                display:block;
+                @include sprite($quote);
+                position: absolute;
+                left: -2.5em;
+                top: 0.5em;
+            }
+        }
     }
     a {
         outline: none !important;
@@ -51,6 +68,10 @@ html {
 
         // letter-spacing: 25em;
     }
+    .h_content{
+        text-transform: none;
+    }
+    
     .swiper-button-disabled{
         opacity: 0.5;
     }
@@ -98,6 +119,11 @@ body {
         padding: 0 1em;
         max-width: $mainMaxWidt;
         min-width: $mainMinWidt;
+        margin: 0 auto;
+    }    
+    .content_width2 {
+        padding: 0 1em;
+        width:$anyPageContentWidt;
         margin: 0 auto;
     }
     // номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона
@@ -209,7 +235,7 @@ body {
             justify-content: flex-start;
             align-items: center;
             flex-flow: row nowrap;
-            padding: 5em 0 3.5em 0;
+            padding: 1em 0 3.5em 0;
             // background-color: $lightGrey;
         }
         &__naming {
@@ -312,6 +338,7 @@ body {
     // blocks
     @import "elements/header";
     @import "elements/_horizontal_categorys";
+    @import "elements/_breadcrumbs";
     @import "elements/_categorys_onmain";
     @import "elements/_tarifs_slider";
     @import "elements/_details_blocks";
