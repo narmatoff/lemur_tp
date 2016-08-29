@@ -21,11 +21,6 @@
     // outline: 1px dotted red;
     padding-bottom: 50em;
 }
-.secondpage__content {
-    @extend .content_width2;
-    // outline: 1px dotted red;
-    padding-bottom: 50em;
-}
 .content {
     &__horizontal {
         display: flex;

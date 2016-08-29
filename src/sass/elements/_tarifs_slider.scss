@@ -155,7 +155,7 @@
                 color: #fff;
                 text-align: center;
                 font-size: 1.1em;
-                /* Приближение из-за подстановки шрифтов */
+                // /* Приближение из-за подстановки шрифтов */
             }
             &__price {
                 height: auto;
@@ -170,22 +170,22 @@
                     // font-family: ClearSans;
                     color: #ffffff;
                     font-size: 36px;
-                    /* Приближение из-за подстановки шрифтов */
+                    // /* Приближение из-за подстановки шрифтов */
                     font-weight: 500;
                     line-height: 30px;
-                    /* Приближение из-за подстановки шрифтов */
+                    // /* Приближение из-за подстановки шрифтов */
                     // text-align: center;
                     text-transform: uppercase;
                 }
                 &__perm {
-                    /* Встроенный стиль */
+                    // /* Встроенный стиль */
                     font-family: $clearsansThinRegular;
                     color: #ffffff;
                     font-size: 1em;
-                    /* Приближение из-за подстановки шрифтов */
+                    // /* Приближение из-за подстановки шрифтов */
                     font-weight: 400;
                     line-height: 30px;
-                    /* Приближение из-за подстановки шрифтов */
+                    // /* Приближение из-за подстановки шрифтов */
                     // text-align: center;
                     padding: 1em 0 0 0.8em;
                 }

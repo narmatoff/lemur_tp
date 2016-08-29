@@ -110,6 +110,16 @@ body {
             }
         }
     }
+    aside {
+        width: $asideWidt;
+    }
+    article{
+        width:$articleWidt;
+        // outline:1px dotted red;
+    }
+    section{
+        
+    }
     button,
     input[type='button'] {
         @extend .type__button;
@@ -235,7 +245,7 @@ body {
             justify-content: flex-start;
             align-items: center;
             flex-flow: row nowrap;
-            padding: 1em 0 3.5em 0;
+            // padding: 3.5em inherit 3.5em inherit;
             // background-color: $lightGrey;
         }
         &__naming {
@@ -344,5 +354,8 @@ body {
     @import "elements/_details_blocks";
     @import "elements/logos_slider";
     @import "elements/main_content";
+    @import "elements/second_content";
+    @import "elements/aside_menu";
+    @import "elements/tarifs_item";
     @import "elements/footer";
 }
