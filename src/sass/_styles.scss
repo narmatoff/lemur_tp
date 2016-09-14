@@ -2,27 +2,80 @@ html {
     font-family: $clearsansRegular;
     // font-kerning: 4.4em;
     letter-spacing: 0;
-    p{
+    p {
         font-family: $clearsansLightRegular;
-        color: #6c6c6c;
+        color: $darkGrey;
         font-size: .9em;
         line-height: 24px;
         text-align: left;
-        &.quote{
-
-            font-size:1.2em;
-            color:$darkGrey;
-            font-weight:bold;
+        margin-top: 0;
+        &.quote {
+            font-size: 1.2em;
+            color: $darkGrey;
+            font-weight: bold;
             width: 413px;
             margin: 3em auto 3em auto;
             position: relative;
-            &:before{
-                content:"";
-                display:block;
+            &:before {
+                content: "";
+                display: block;
                 @include sprite($quote);
                 position: absolute;
                 left: -2.5em;
                 top: 0.5em;
+            }
+        }
+    }
+    // ul {
+    //     padding: 0;
+    //     margin: 0;
+    //     li {
+    //         list-style-type: none;
+    //         color: lighten($darkGrey,40%);
+    //         font-size: 0.9em;
+    //         font-weight: 400;
+    //         line-height: 50px;
+    //         text-align: left;
+    //         padding:0 1em 0 2em;
+    //         margin:0 0 1em 0;
+    //         // outline:1px dotted red;
+    //         background-color:$lightGrey;
+    //     }
+    // }
+    table {
+                cellspacing:1em;
+        tr {
+            th {
+                list-style-type: none;
+                color: lighten($darkGrey, 40%);
+                font-size: 0.9em;
+                font-weight: bold;
+                line-height: 50px;
+                text-align: left;
+                padding: 0 1em 0 2em;
+                // margin: 0 0 1em 0;
+                border-bottom: 1em;
+                border-right: 0.5em;
+                border-style: solid;
+                border-color: #fff;
+                background-color: $lightGrey;
+            }
+            td {
+                list-style-type: none;
+                color: lighten($darkGrey, 40%);
+                font-size: 0.9em;
+                font-weight: 400;
+                line-height: 50px;
+                text-align: left;
+                padding: 0 1em 0 2em;
+                // margin: 0 0 1em 0;
+                border-bottom: 1em;
+                border-right: 0.5em;
+                border-style: solid;
+                border-color: #fff;
+                background-color: $lightGrey;
+
+
             }
         }
     }
@@ -31,9 +84,8 @@ html {
         transition: all ease-in-out 0.05s;
         color: $yellow;
         text-decoration: underline;
-        &:hover{
-            color: darken($yellow,10%);
-
+        &:hover {
+            color: darken($yellow, 10%);
         }
     }
     button,
@@ -54,7 +106,6 @@ html {
         position: relative;
         z-index: 5;
     }
-
     // заголовок
     h2 {
         // font-size: 24pt;
@@ -65,17 +116,29 @@ html {
         position: relative;
         z-index: 5;
         margin: 2.5em 0 2.5em 0;
-
         // letter-spacing: 25em;
     }
-    .h_content{
+    h3 {
+        // font-size: 24pt;
+        color: $darkGrey;
+        // text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+        margin: 2.5em 0 1.5em 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: left;
+        // letter-spacing: 25em;
+    }
+    .h_content {
         text-transform: none;
     }
-    
-    .swiper-button-disabled{
+    .swiper-button-disabled {
         opacity: 0.5;
     }
 }
+
 body {
     color: $darkGrey;
     // buttons
@@ -113,13 +176,11 @@ body {
     aside {
         width: $asideWidt;
     }
-    article{
-        width:$articleWidt;
+    article {
+        width: $articleWidt;
         // outline:1px dotted red;
     }
-    section{
-        
-    }
+    section {}
     button,
     input[type='button'] {
         @extend .type__button;
@@ -130,10 +191,10 @@ body {
         max-width: $mainMaxWidt;
         min-width: $mainMinWidt;
         margin: 0 auto;
-    }    
+    }
     .content_width2 {
         padding: 0 1em;
-        width:$anyPageContentWidt;
+        width: $anyPageContentWidt;
         margin: 0 auto;
     }
     // номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона// номер телефона
@@ -160,7 +221,6 @@ body {
         @include sprite($telephone_big_hover);
         // transition: none;
     }
-
     .meh__icon {
         @include sprite($cogwheel);
         // transition: none;
@@ -169,7 +229,6 @@ body {
         @include sprite($cogwheel-hover);
         // transition: none;
     }
-
     .smartphone__icon {
         @include sprite($smartphone);
         // transition: none;
@@ -178,7 +237,6 @@ body {
         @include sprite($repair-tools);
         // transition: none;
     }
-
     .server__icon {
         @include sprite($server);
         // transition: none;
@@ -187,30 +245,23 @@ body {
         @include sprite($server-hover);
         // transition: none;
     }
-
-    .coins__icon{
+    .coins__icon {
         @include sprite($coins_icon);
-
     }
-    .repairtools__icon{
+    .repairtools__icon {
         @include sprite($repairtools_icon);
-
     }
-    .callwomen__icon{
+    .callwomen__icon {
         @include sprite($callwomen_icon);
-
     }
-    .rings__icon{
+    .rings__icon {
         @include sprite($rings_icon);
-
     }
-    .helpcircle__icon{
+    .helpcircle__icon {
         @include sprite($helpcircle_icon);
-
     }
-    .key__icon{
+    .key__icon {
         @include sprite($key_icon);
-
     }
     // h2 заголовок на главной
     // h2 заголовок на главной
@@ -252,14 +303,12 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            h1{
+            h1 {
                 margin: inherit;
             }
-            h2{
+            h2 {
                 margin: inherit;
-
             }
-
             // смотреть все/подробнее
             // смотреть все/подробнее
             // смотреть все/подробнее
@@ -294,7 +343,6 @@ body {
             justify-content: space-between;
             align-items: center;
             flex-flow: row nowrap;
-
         }
     }
     .prev__button {
@@ -305,7 +353,7 @@ body {
         left: 0;
         top: 22px;
         background-size: auto;
-        &_darkfirst{
+        &_darkfirst {
             @include sprite($prev_arrow_hover);
             cursor: pointer;
             // transition:all ease .01s;
@@ -328,7 +376,7 @@ body {
         right: 0;
         top: 22px;
         background-size: auto;
-        &_darkfirst{
+        &_darkfirst {
             @include sprite($next_arrow_hover);
             cursor: pointer;
             z-index: 9999;
@@ -343,8 +391,6 @@ body {
             @include sprite($next_arrow_hover);
         }
     }
-
-
     // blocks
     @import "elements/header";
     @import "elements/_horizontal_categorys";
@@ -357,5 +403,6 @@ body {
     @import "elements/second_content";
     @import "elements/aside_menu";
     @import "elements/tarifs_item";
+    @import "elements/tarif_page";
     @import "elements/footer";
 }
