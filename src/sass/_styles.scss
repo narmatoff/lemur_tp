@@ -85,7 +85,7 @@ html {
         color: $yellow;
         text-decoration: underline;
         &:hover {
-            color: darken($yellow, 10%);
+            // color: darken($yellow, 10%);
         }
     }
     button,
@@ -115,7 +115,7 @@ html {
         text-transform: uppercase;
         position: relative;
         z-index: 5;
-        margin: 2.5em 0 2.5em 0;
+        margin: 2.5em 0 1.5em 0;
         // letter-spacing: 25em;
     }
     h3 {
@@ -212,57 +212,7 @@ body {
         }
         &_footercolor {}
     }
-    // иконки
-    .phone__icon__big {
-        @include sprite($telephone_big);
-        // transition: none;
-    }
-    .phone__icon__big_white {
-        @include sprite($telephone_big_hover);
-        // transition: none;
-    }
-    .meh__icon {
-        @include sprite($cogwheel);
-        // transition: none;
-    }
-    .meh__icon_white {
-        @include sprite($cogwheel-hover);
-        // transition: none;
-    }
-    .smartphone__icon {
-        @include sprite($smartphone);
-        // transition: none;
-    }
-    .tools__icon {
-        @include sprite($repair-tools);
-        // transition: none;
-    }
-    .server__icon {
-        @include sprite($server);
-        // transition: none;
-    }
-    .server__icon_white {
-        @include sprite($server-hover);
-        // transition: none;
-    }
-    .coins__icon {
-        @include sprite($coins_icon);
-    }
-    .repairtools__icon {
-        @include sprite($repairtools_icon);
-    }
-    .callwomen__icon {
-        @include sprite($callwomen_icon);
-    }
-    .rings__icon {
-        @include sprite($rings_icon);
-    }
-    .helpcircle__icon {
-        @include sprite($helpcircle_icon);
-    }
-    .key__icon {
-        @include sprite($key_icon);
-    }
+    
     // h2 заголовок на главной
     // h2 заголовок на главной
     // h2 заголовок на главной
@@ -317,10 +267,10 @@ body {
                 color: $yellow;
                 font-family: $clearsansThinRegular;
                 font-size: 15px;
-                /* Приближение из-за подстановки шрифтов */
+                // /* Приближение из-за подстановки шрифтов */
                 font-weight: 400;
                 line-height: 20px;
-                /* Приближение из-за подстановки шрифтов */
+                // /* Приближение из-за подстановки шрифтов */
                 text-align: right;
                 letter-spacing: 0;
                 &:hover {
@@ -391,8 +341,10 @@ body {
             @include sprite($next_arrow_hover);
         }
     }
+
     // blocks
     @import "elements/header";
+    @import "elements/icons";
     @import "elements/_horizontal_categorys";
     @import "elements/_breadcrumbs";
     @import "elements/_categorys_onmain";
@@ -404,5 +356,7 @@ body {
     @import "elements/aside_menu";
     @import "elements/tarifs_item";
     @import "elements/tarif_page";
+    @import "elements/uslugi_page";
     @import "elements/footer";
 }
+

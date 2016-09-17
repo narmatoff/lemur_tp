@@ -15,13 +15,19 @@
         letter-spacing: 0.09em;
     }
     &_item{
-        width: 180px;
+        width: 185px;
         height: 100px;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        transition:all ease 0.2s;
+        &:hover{
+            span{
+                color:$yellow;
+            }
+        }
 
         span{
             display: block;
